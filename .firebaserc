@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "contacts-app-cloud": {
+      "hosting": {
+        "contacts-app": [
+          "contacts-app-cloud"
+        ]
+      }
+    }
+  }
+}
