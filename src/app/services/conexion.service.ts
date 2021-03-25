@@ -3,7 +3,11 @@ import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/fire
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 
-export interface Item { name: string; }
+export interface Item {
+  name: string;
+  email: string;
+  phone: string;
+}
 
 @Injectable({
   providedIn: 'root'

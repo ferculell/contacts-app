@@ -23,16 +23,15 @@ export class ListaComponent implements OnInit {
 } */
 
 import { Component, OnInit } from '@angular/core';
-//import { ConexionService } from 'src/app/services/conexion.service';
+import { ConexionService } from 'src/app/services/conexion.service';
 import { MatTableDataSource } from '@angular/material/table';
 
-export interface PeriodicElement {
+export interface Contact {
   name: string;
-  position: number;
-  weight: number;
-  symbol: string;
+  email: string;
+  phone: string;
 }
-
+/* 
 const ELEMENT_DATA: PeriodicElement[] = [
   {position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H'},
   {position: 2, name: 'Helium', weight: 4.0026, symbol: 'He'},
@@ -45,28 +44,24 @@ const ELEMENT_DATA: PeriodicElement[] = [
   {position: 9, name: 'Fluorine', weight: 18.9984, symbol: 'F'},
   {position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne'},
 ];
-
+ */
 @Component({
   selector: 'app-lista',
   templateUrl: './lista.component.html',
   styleUrls: ['./lista.component.css']
 })
 export class ListaComponent implements OnInit {
-/* 
-  items:any;
 
-  constructor(private conexion:ConexionService) { 
-    this.conexion.listarItems().subscribe(item => {
-      this.items = item;
-    })
-  }
- */
+  displayedColumns: string[] = ['name', 'email', 'phone'];
+  dataSource = new MatTableDataSource();
 
-  displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
-  dataSource = new MatTableDataSource(ELEMENT_DATA);
+  //items:Contact[];
+
+  constructor(private conexion:ConexionService) { }
 
 
-  ngOnInit(): void {
+  ngOnInit() {
+    this.conexion.listarItems().subscribe(res => this.dataSource.data = res);
   }
 
   applyFilter(event: Event) {
