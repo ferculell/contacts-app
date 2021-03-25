@@ -9,12 +9,17 @@ import { AngularFireModule } from '@angular/fire';
 import { AngularFireAnalyticsModule } from '@angular/fire/analytics';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { environment } from '../environments/environment';
+import { MatTableModule } from '@angular/material/table';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
 
-import { ConexionService } from './services/conexion.service'
+import { ConexionService } from './services/conexion.service';
+import { ListaComponent } from './components/lista/lista.component'
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ListaComponent
   ],
   imports: [
     BrowserModule,
@@ -22,7 +27,10 @@ import { ConexionService } from './services/conexion.service'
     BrowserAnimationsModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAnalyticsModule,
-    AngularFirestoreModule
+    AngularFirestoreModule,
+    MatTableModule,
+    MatFormFieldModule,
+    MatInputModule
   ],
   providers: [ConexionService],
   bootstrap: [AppComponent]
