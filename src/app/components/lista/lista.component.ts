@@ -28,7 +28,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
 })
 export class ListaComponent implements OnInit {
 
-  displayedColumns: string[] = ['name', 'email', 'phone'];
+  displayedColumns: string[] = ['name', 'email', 'phone', 'actions'];
   dataSource = new MatTableDataSource();
 
   //items:Contact[];
