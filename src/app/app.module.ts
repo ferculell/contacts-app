@@ -12,6 +12,8 @@ import { environment } from '../environments/environment';
 import { MatTableModule } from '@angular/material/table';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
 
 import { ConexionService } from './services/conexion.service';
 import { ListaComponent } from './components/lista/lista.component'
@@ -30,7 +32,9 @@ import { ListaComponent } from './components/lista/lista.component'
     AngularFirestoreModule,
     MatTableModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    MatButtonModule,
+    MatIconModule
   ],
   providers: [ConexionService],
   bootstrap: [AppComponent]
