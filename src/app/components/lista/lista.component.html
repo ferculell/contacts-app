@@ -1,6 +1,7 @@
-<mat-form-field>
-    <mat-label>Filter</mat-label>
-    <input matInput (keyup)="applyFilter($event)" placeholder="Ex. ium" #input>
+<div class="contenedor">
+  <mat-form-field>
+    <mat-label>Buscar</mat-label>
+    <input matInput (keyup)="applyFilter($event)" placeholder="Ej. Juan" #input>
   </mat-form-field>
   
   <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
@@ -57,6 +58,7 @@
     </tr>
   </table>
 
-  <button mat-fab color="primary">
+  <button id="float-btn" mat-fab color="primary">
     <mat-icon>add</mat-icon>
   </button>
+</div>

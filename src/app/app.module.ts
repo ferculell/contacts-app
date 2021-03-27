@@ -15,14 +15,18 @@ import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatDialogModule } from '@angular/material/dialog';
 
 import { ConexionService } from './services/conexion.service';
-import { ListaComponent } from './components/lista/lista.component'
+import { ListaComponent } from './components/lista/lista.component';
+import { ToolbarComponent } from './components/toolbar/toolbar.component'
 
 @NgModule({
   declarations: [
     AppComponent,
-    ListaComponent
+    ListaComponent,
+    ToolbarComponent
   ],
   imports: [
     BrowserModule,
@@ -36,7 +40,9 @@ import { ListaComponent } from './components/lista/lista.component'
     MatInputModule,
     MatButtonModule,
     MatIconModule,
-    MatMenuModule
+    MatMenuModule,
+    MatToolbarModule,
+    MatDialogModule
   ],
   providers: [ConexionService],
   bootstrap: [AppComponent]

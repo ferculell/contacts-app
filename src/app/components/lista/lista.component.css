@@ -2,12 +2,22 @@ button {
   margin: 5px;
 }
 
+.contenedor {
+  margin: 5%;
+}
+
 /* Structure */
 table {
-    width: 100%;
-  }
+  width: 100%;
+}
   
-  .mat-form-field {
-    font-size: 14px;
-    width: 100%;
-  }
+.mat-form-field {
+  font-size: 14px;
+  width: 100%;
+}
+
+#float-btn {
+  margin-top: -10px;
+  margin-right: 10px;
+  float: right;
+}
