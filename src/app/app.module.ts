@@ -22,14 +22,16 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ConexionService } from './services/conexion.service';
 import { ListaComponent } from './components/lista/lista.component';
 import { ToolbarComponent } from './components/toolbar/toolbar.component';
-import { DialogComponent } from './components/dialog/dialog.component'
+import { DialogComponent } from './components/dialog/dialog.component';
+import { DialogEditComponent } from './components/dialog-edit/dialog-edit.component'
 
 @NgModule({
   declarations: [
     AppComponent,
     ListaComponent,
     ToolbarComponent,
-    DialogComponent
+    DialogComponent,
+    DialogEditComponent
   ],
   imports: [
     BrowserModule,

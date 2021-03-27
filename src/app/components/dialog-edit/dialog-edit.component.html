@@ -1,8 +1,8 @@
-<form (ngSubmit)="agregar()">
+<form (ngSubmit)="agregarItemEditado()">
     <p>
         <mat-form-field appearance="outline">
           <mat-label>Ingresar Nombre</mat-label>
-          <input matInput name="name" placeholder="Juan Ejemplo" [(ngModel)]="item.name" [formControl]="nombre" required>
+          <input matInput name="name" [(ngModel)]="data.name" [formControl]="nombre" required>
           <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
           <mat-hint>Requerido</mat-hint>
           <mat-error *ngIf="nombre.invalid">{{getNombreErrorMessage()}}</mat-error>
@@ -11,7 +11,7 @@
       <p>
         <mat-form-field appearance="outline">
             <mat-label>Ingresar Email</mat-label>
-            <input matInput name="email" placeholder="pat@example.com" [(ngModel)]="item.email" [formControl]="email" required>
+            <input matInput name="email" [(ngModel)]="data.email" [formControl]="email" required>
             <mat-icon matSuffix>email</mat-icon>
             <mat-hint>Requerido</mat-hint>
             <mat-error *ngIf="email.invalid">{{getEmailErrorMessage()}}</mat-error>
@@ -20,11 +20,11 @@
       <p>
         <mat-form-field appearance="outline">
           <mat-label>Ingresar teléfono</mat-label>
-          <input matInput name="phone" placeholder="54111111111" [(ngModel)]="item.phone">
+          <input matInput name="phone" [(ngModel)]="data.phone">
           <mat-icon matSuffix>phone</mat-icon>
           <mat-hint>Opcional</mat-hint>
         </mat-form-field>
       </p>
       <button mat-button mat-dialog-close>Cancelar</button>
-      <button mat-raised-button color="primary" type="submit">Crear Contacto</button>
+      <button mat-raised-button color="primary" type="submit">Modificar Contacto</button>
 </form>
