@@ -34,6 +34,10 @@ export class ConexionService {
     return this.items;
   }
 
+  agregarItem(item: Item) {
+    this.itemsCollection.add(item);
+  }
+
   eliminarItem(item) {
     this.itemDoc = this.afs.doc<Item>(`contacts/${item.id}`);
     this.itemDoc.delete();
