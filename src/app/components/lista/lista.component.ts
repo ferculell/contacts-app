@@ -45,4 +45,8 @@ export class ListaComponent implements OnInit {
     this.dataSource.filter = filterValue.trim().toLowerCase();
   }
 
+  eliminar(item) {
+    this.conexion.eliminarItem(item);
+  }
+
 }

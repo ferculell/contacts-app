@@ -40,7 +40,7 @@
             <mat-icon>edit</mat-icon>
             <!-- <span>Editar</span> -->
           </button>
-          <button mat-mini-fab>
+          <button mat-mini-fab (click)="eliminar(element)">
             <mat-icon>delete</mat-icon>
             <!-- <span>Borrar</span> -->
           </button>
@@ -56,4 +56,7 @@
       <td class="mat-cell" colspan="4">No hay resultados para "{{input.value}}"</td>
     </tr>
   </table>
-  
+
+  <button mat-fab color="primary">
+    <mat-icon>add</mat-icon>
+  </button>
