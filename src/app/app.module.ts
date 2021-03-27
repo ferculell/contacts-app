@@ -17,16 +17,19 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatDialogModule } from '@angular/material/dialog';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { ConexionService } from './services/conexion.service';
 import { ListaComponent } from './components/lista/lista.component';
-import { ToolbarComponent } from './components/toolbar/toolbar.component'
+import { ToolbarComponent } from './components/toolbar/toolbar.component';
+import { DialogComponent } from './components/dialog/dialog.component'
 
 @NgModule({
   declarations: [
     AppComponent,
     ListaComponent,
-    ToolbarComponent
+    ToolbarComponent,
+    DialogComponent
   ],
   imports: [
     BrowserModule,
@@ -42,7 +45,9 @@ import { ToolbarComponent } from './components/toolbar/toolbar.component'
     MatIconModule,
     MatMenuModule,
     MatToolbarModule,
-    MatDialogModule
+    MatDialogModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [ConexionService],
   bootstrap: [AppComponent]

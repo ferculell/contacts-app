@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ConexionService } from 'src/app/services/conexion.service';
 import { MatTableDataSource } from '@angular/material/table';
+import { MatDialog } from '@angular/material/dialog';
+import { DialogComponent } from '../dialog/dialog.component';
 
 export interface Contact {
   name: string;
@@ -33,7 +35,7 @@ export class ListaComponent implements OnInit {
 
   //items:Contact[];
 
-  constructor(private conexion:ConexionService) { }
+  constructor(private conexion:ConexionService, public dialog: MatDialog) { }
 
 
   ngOnInit() {
@@ -43,6 +45,14 @@ export class ListaComponent implements OnInit {
   applyFilter(event: Event) {
     const filterValue = (event.target as HTMLInputElement).value;
     this.dataSource.filter = filterValue.trim().toLowerCase();
+  }
+
+  openDialog() {
+    const dialogRef = this.dialog.open(DialogComponent);
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log(`Dialog result: ${result}`);
+    });
   }
 
   eliminar(item) {
