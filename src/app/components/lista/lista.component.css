@@ -6,6 +6,16 @@ button {
   margin: 5%;
 }
 
+.buscador {
+  position: sticky;
+  top: 64px;
+  z-index: 99;
+  background-color: white;
+}
+
+.buscador input {
+  padding-left: 10px;
+}
 
 /* Structure */
 table {
