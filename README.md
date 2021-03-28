@@ -1,6 +1,7 @@
 # ContactsApp
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.5.
+Online demo deployed to Firebase here: https://contacts-app-cloud.web.app/
 
 ## Development server
 
