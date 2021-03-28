@@ -3,7 +3,7 @@
         <mat-form-field appearance="outline">
           <mat-label>Ingresar Nombre</mat-label>
           <input matInput name="name" placeholder="Juan Ejemplo" [(ngModel)]="item.name" [formControl]="nombre" required>
-          <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+          <mat-icon matSuffix>person</mat-icon>
           <mat-hint>Requerido</mat-hint>
           <mat-error *ngIf="nombre.invalid">{{getNombreErrorMessage()}}</mat-error>
         </mat-form-field>
@@ -26,5 +26,5 @@
         </mat-form-field>
       </p>
       <button mat-button mat-dialog-close>Cancelar</button>
-      <button mat-raised-button color="primary" type="submit">Crear Contacto</button>
+      <button mat-raised-button color="primary" type="submit" mat-dialog-close [disabled]="!formisvalid">Crear Contacto</button>
 </form>
