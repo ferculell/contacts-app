@@ -3,6 +3,9 @@
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.5.
 Online demo deployed to Firebase here: https://contacts-app-cloud.web.app/
 
+[![Go to the live application](https://imgur.com/a/jL1amyf)](https://contacts-app-cloud.web.app "Go to the live application")
+
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
