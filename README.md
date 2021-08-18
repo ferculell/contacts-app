@@ -3,7 +3,7 @@
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.5.
 Online demo deployed to Firebase here: https://contacts-app-cloud.web.app/
 
-[![Go to the live application](https://imgur.com/a/jL1amyf)](https://contacts-app-cloud.web.app "Go to the live application")
+[![Go to the live application](https://i.postimg.cc/gkwKdWWy/contacts-app.png)](https://contacts-app-cloud.web.app "Go to the live application")
 
 
 ## Development server
